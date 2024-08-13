@@ -23,6 +23,7 @@ async function api(search){
   return (
     <>
      <h1>Emoji Search</h1>
+     
        <input 
         type="text"
         className='my-4 w-3/4 rounded-lg h-9 px-3 '
@@ -33,7 +34,9 @@ async function api(search){
        <div className='flex flex-row flex-wrap w-100'>      
           {emojis.map(emoji => (
           <div className='h-10 bg-gray-400 m-5 text-xl  cursor-pointer rounded-lg w-12 content-center flex-row' 
-          key={emoji.slug}>          
+          key={emoji.slug}
+          onClick={() => { navigator.clipboard.writeText(emoji.character) }}
+          >          
             {emoji.character}
             </div>
 

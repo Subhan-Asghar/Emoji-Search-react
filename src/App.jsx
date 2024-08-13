@@ -1,5 +1,6 @@
 import './App.css'
-import { useState  } from 'react'
+import { useState} from 'react'
+
 
 function App() {
   const [etext ,setetext]=useState('')
@@ -31,7 +32,7 @@ async function api(search){
        {/* ................................................ */}
        <div className='flex flex-row flex-wrap w-100'>      
           {emojis.map(emoji => (
-          <div className='h-10 bg-gray-400 m-5 text-xs cursor-pointer rounded-lg w-10 content-center flex-row' 
+          <div className='h-10 bg-gray-400 m-5 text-xl  cursor-pointer rounded-lg w-12 content-center flex-row' 
           key={emoji.slug}>          
             {emoji.character}
             </div>
@@ -43,3 +44,5 @@ async function api(search){
 }
 
 export default App
+
+
